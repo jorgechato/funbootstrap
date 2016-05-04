@@ -1,2 +1,53 @@
 body{
+  font-family: 'lato';
+
+  .btn-primary{
+    color: @black;
+    background: @red;
+    border-color: @red;
+    color: @black !important;
+    &:hover,
+    &:focus {
+      background: @orange;
+      border-color: @orange;
+    }
+  }
+
+  #contact{
+    text-align: center;
+
+    .generate-background(4);
+
+    .generate-background(@n, @i: 1) when (@i =< @n) {
+      .column-@{i} {
+        background-image: url('/assets/img/@{i}.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .generate-background(@n, (@i + 1));
+    }
+
+    .social{
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      height: 200px;
+      padding : 0;
+      margin-top: 3px;
+      cursor: pointer;
+
+      i{
+        color: white;
+        font-size: 100px;
+        top: 25%;
+        display: block;
+        position: relative;
+      }
+
+      &:hover,
+      &:focus{
+        transform: scale(1.1);
+      }
+    }
+  }
 }

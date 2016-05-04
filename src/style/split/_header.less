@@ -1,0 +1,48 @@
+.navbar-default {
+  background-color: @mainColor;
+  border-color: @mainColor;
+  border-radius: 0;
+
+  .navbar-brand {
+    padding: 2px;
+    color: @lightgrey;
+    &:hover,
+    &:focus {
+      color: @darkerwhite;
+    }
+    img{
+      height: 100%;
+    }
+  }
+
+  .navbar-text {
+    color: @lightgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @lightgrey;
+
+      &:hover,
+      &:focus {
+        color: @darkerwhite;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @darkerwhite;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @darkerwhite;
+      }
+    }
+  }
+}
