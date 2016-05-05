@@ -13,11 +13,11 @@
     <title>{% block title %}Jorge Chato{% endblock %}</title>
     <link rel="icon" href="/assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/img/favicon.ico">
-    {% block css %}
     <!-- inject:css -->
     <link rel="stylesheet" href="/style/vendor.min.css">
     <link rel="stylesheet" href="/style/base.min.css">
     <!-- endinject -->
+    {% block css %}
     {% endblock %}
     <base href="/" target="" />
   </head>
@@ -27,13 +27,14 @@
       {% block content %}
       {% endblock %}
     </div>
-    <footer>
+    <footer class="footer">
       {% include 'elements/footer.html' %}
 
-      {% block js %}
       <!-- inject:js-->
       <script src="/scripts/vendor.min.js"></script>
+      <script src="/scripts/app.min.js"></script>
       <!-- endinject -->
+      {% block js %}
       {% endblock %}
     </footer>
   </body>
