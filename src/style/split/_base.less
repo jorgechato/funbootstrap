@@ -1,6 +1,38 @@
 body{
   font-family: 'lato';
 
+  .video-demo{
+    margin-top: -20px;
+    border-bottom: 5px solid @yellow;
+  }
+
+  .somos{
+    background: @lime;
+    padding: 3em 0 6em 0;
+    text-align: center;
+
+    i{
+      font-size: 75px;
+      line-height: 150px;
+      display: block;
+      color: @lime;
+      background: @black;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      margin: 20px auto;
+    }
+
+    .col-md-4{
+      &:hover,
+      &:focus{
+        i{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
   .btn-primary{
     color: @black;
     background: @red;

@@ -21,10 +21,10 @@
   </head>
   <body>
     {% include 'elements/nav.html' %}
-    <div class="container">
-      {% block content %}
-      {% endblock %}
-    </div>
+    {% block video %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
     <footer class="footer">
       {% include 'elements/footer.html' %}
 
