@@ -6,6 +6,81 @@ body{
     border-bottom: 5px solid @yellow;
   }
 
+  .events{
+    h1{
+      color: @lightgrey;
+    }
+
+    .row{
+      text-align: center;
+      margin-bottom: 2em;
+
+      button{
+        margin-top: 2em;
+      }
+
+      img{
+        width: 100%;
+        padding-bottom: 3em;
+      }
+    }
+  }
+
+  .activities{
+    margin-top: -20px;
+    background: @grey;
+    text-align: center;
+    color: @darkerwhite;
+    font-weight: bold;
+
+    .crow{
+      border-bottom: 5px solid @red;
+      padding: 3em 0 6em 0;
+
+      img{
+        display: block;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        margin: 20px auto;
+      }
+    }
+
+    .active{
+      overflow: hidden;
+
+      .row{
+        .generate-background(4);
+
+        .generate-background(@n, @i: 1) when (@i =< @n) {
+          .column-@{i} {
+            background-image: url('/assets/img/@{i}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .generate-background(@n, (@i + 1));
+        }
+        .col-md-6{
+          font-weight: bold;
+          height: 320px;
+          margin: 0;
+          padding: 0;
+
+          h2{
+            margin: 0;
+            padding: 0;
+            line-height: 320px;
+            &:hover,
+            &:focus{
+              font-size: 350%;
+              background: rgba(0,0,0,.5);
+            }
+          }
+        }
+      }
+    }
+  }
+
   .somos{
     background: @lime;
     padding: 3em 0 6em 0;
