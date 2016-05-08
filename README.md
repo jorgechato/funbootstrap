@@ -1,7 +1,7 @@
 # FrunBootstrap
 
 # Demo
-http://nas.jorgechato.com/funbootstrap
+https://funbootstrap.herokuapp.com/
 
 # Production
 ## Install
